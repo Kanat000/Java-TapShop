@@ -1,8 +1,8 @@
 package com.example.demo.model;
 
 public enum Permission {
-    DEVELOPER("DEVELOPER"),
-    VIEWER("VIEWER");
+    WEBSITE_VIEW("website:view"),
+    WEBSITE_CHANGE("website:change");
 
     private final String permission;
 

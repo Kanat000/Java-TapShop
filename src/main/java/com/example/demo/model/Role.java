@@ -6,8 +6,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public enum Role {
-    VIEWER(Permission.VIEWER.getPermission()),
-    DEVELOPER(Permission.DEVELOPER.getPermission());
+    FOLLOWER(Set.of(Permission.WEBSITE_VIEW)),
+    SHOP_ADMIN(Set.of(Permission.WEBSITE_VIEW,Permission.WEBSITE_CHANGE));
 
     private final Set<Permission> permissions;
 

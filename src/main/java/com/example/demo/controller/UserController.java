@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,10 +18,12 @@ public class UserController {
         return "login";
     }
     @GetMapping("/adminPanel")
+    @PreAuthorize("hasAuthority('website:view')")
     public String adminPanel(){
         return "AdminPage";
     }
     @GetMapping("/sayhello")
+
     public String sayHello(){
         return "Hello";
     }
